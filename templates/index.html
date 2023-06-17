@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Job Search website</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='main/style.css')}}">
+  </head>
+  <body>
+    <h1>Flask Job Search</h1>
+    <img src="https://img.freepik.com/free-vector/man-search-hiring-job-online-from-laptop_1150-52728.jpg?w=2000" width="100%">
+    <h2>About Jambia</h2>
+    <div class='jambia_text'>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eu elit vel eros rhoncus volutpat. Duis quis mattis dui. Mauris quis pellentesque turpis. ipsum dolor sit amet, consectetur adipiscing elit. Phasellus fringilla nisl scelerisque mattis posuere. Maecenas quis finibus quam. Nam ultrices pulvinar lorem at tempus. Ut erat lorem, pharetra et cursus id, semper vestibulum odio. Nunc sed finibus eros. Suspendisse potenti. Sed consectetur convallis est. Aenean eros libero, maximus a diam sit amet, bibendum viverra nulla.
+
+Maecenas posuere turpis semper, vulputate lorem ac, elementum tellus. Sed eget dignissim lectus. In malesuada dapibus nulla, at sodales lacus accumsan vel. Vivamus laoreet sem eget cursus sodales. Suspendisse sit amet erat sit amet quam posuere bibendum sit amet vel libero. Suspendisse id erat enim. Vivamus pharetra magna nisl, a semper velit luctus euismod. Praesent consequat venenatis vestibulum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam vel lorem mollis, sagittis felis a, scelerisque dui. Nullam sollicitudin ante non magna fermentum, aliquam rutrum ex tristique. Aliquam erat volutpat. Curabitur congue elit vel laoreet malesuada. Aenean in bibendum velit.</p>
+      
+    </div>
+    <h2>Open Positions</h2>
+    <p>TODO - Show the Jobs here</p>
+    <div>
+      {% for job in jobs %}
+      <div><h1 style="text-align:left">{{job['title']}}</h1></div>
+       <div>{{job['location']}}</div>
+       <div>{{job['salary']}}</div>
+      {% endfor %}
+    </div>
+    <button>Contact Us</button>
+  </body>
+</html>
